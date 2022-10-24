@@ -38,6 +38,10 @@ setInterval(function() {
     nextPrev(true);
 }, 1000);
 
+thumbs.addEventListener("mouseover", function(){
+    clearInterval(nextPrev);
+})
+
 
 function nextPrev(isNext){
   listImages[counterImages].classList.remove('active');

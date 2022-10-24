@@ -34,7 +34,9 @@ next.addEventListener('click',function(){
   nextPrev(true);
 })
 
-
+setInterval(function() {
+    nextPrev(true);
+}, 1000);
 
 
 function nextPrev(isNext){
@@ -50,3 +52,4 @@ function nextPrev(isNext){
   listImages[counterImages].classList.add('active');
   listthumbs[counterImages].classList.add('active');
 }
+

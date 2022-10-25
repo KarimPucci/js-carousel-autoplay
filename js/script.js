@@ -34,13 +34,21 @@ next.addEventListener('click',function(){
   nextPrev(true);
 })
 
+let isOver = false;
+
 setInterval(function() {
-    nextPrev(true);
+    if(!isOver) nextPrev(true);
 }, 1000);
 
-thumbs.addEventListener("mouseover", function(){
-    clearInterval(nextPrev);
+slider.addEventListener("mouseleave", function(){
+  isOver = true;
 })
+
+slider.addEventListener("mouseenter", function(){
+  isOver = false;
+})
+
+
 
 
 function nextPrev(isNext){
